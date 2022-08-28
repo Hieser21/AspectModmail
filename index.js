@@ -1,10 +1,11 @@
+require('dotenv').config()
 const Discord = require('discord.js')
 const { EmbedBuilder, ChannelType } = require('discord.js')
 const { Client, Partials } = require('discord.js')
 const { ActionRowBuilder, ButtonBuilder } = require('discord.js');
 
 const client = new Client({intents: ["Guilds", "", "GuildMessages", "GuildPresences", "GuildMembers", "DirectMessages", "DirectMessageReactions", "MessageContent"], partials: [Partials.Channel]})
-const token = "MTAxMDU5MDIxMzQ5MzUwMTk3Mg.Gm-_c8.ioqBddhjN8EFG5fBfQJpYobBvhOCtWv4IsKKDE" // OTk0OTkxNzc3ODQyOTk5Mzg4.G7rr9U.hnFwwtFq0a4lq77KB5LDrlUgUZmQQ4v9353ZOY
+const token = process.env.TOKEN;
 
 const guildID = "1010581422102282251"
 const archiveCategoryID = "1010581471188242463"
