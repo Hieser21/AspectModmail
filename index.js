@@ -1,4 +1,5 @@
 require('dotenv').config()
+
 const Discord = require('discord.js')
 const { EmbedBuilder, ChannelType } = require('discord.js')
 const { Client, Partials } = require('discord.js')
