@@ -5,11 +5,11 @@ const { Client, Partials } = require('discord.js')
 const { ActionRowBuilder, ButtonBuilder } = require('discord.js');
 
 const client = new Client({intents: ["Guilds", "", "GuildMessages", "GuildPresences", "GuildMembers", "DirectMessages", "DirectMessageReactions", "MessageContent"], partials: [Partials.Channel]})
-const token = $`{process.env.TOKEN}`
+const token = process.env.TOKEN
 
-const guildID = $`{process.env.GUILD}`
-const archiveCategoryID = $`{process.env.ARCHIVE}`
-const modmailCategoryID = $`{process.env.CATEGORY}`
+const guildID = process.env.GUILD
+const archiveCategoryID = process.env.ARCHIVE
+const modmailCategoryID = process.env.CATEGORY
 
 client.on("ready", () =>{
     console.log(client.user.tag + " is now online!")
